@@ -28,12 +28,12 @@ import Input from "./Input";
 export function NavBar() {
   let menuItems = [
     {
-      name: "AI Design Tools",
-      href: "/ai-tools",
+      name: "Home",
+      href: "/home",
     },
     {
-      name: "AI Tools",
-      href: "/ai-tools",
+      name: "Categories",
+      href: "/categories",
     },
   ];
 
@@ -67,21 +67,21 @@ export function NavBar() {
             <NavigationMenuItem>
               <Link href="/docs" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  AI Tools
+                  Shop
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/contact" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Contact Us
+                  Contact
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/about" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  About Us
+                  Pricing
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
