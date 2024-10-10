@@ -27,11 +27,11 @@ export function JoinWaitList() {
           vendors, and customers globally. Be the first to experience the
           revolution in fashion with Rookus.
         </p>
-        <Input
+        {/* <Input
           type="email"
           placeholder="sh20raj@gmail.com"
           className="w-full relative z-10 mt-4 text-center"
-        />
+        /> */}
         {/* Button to open the waitlist modal */}
         <Button
           onClick={openModal}
