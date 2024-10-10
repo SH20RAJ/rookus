@@ -135,7 +135,6 @@ const Contact = () => {
 
   return (
     <>
-      <NavBar />
       <div style={styles.container}>
         <div style={styles.info}>
           <div style={styles.title}>Get in Touch</div>

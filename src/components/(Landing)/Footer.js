@@ -38,13 +38,13 @@ export default function Footer() {
             <h3 className="text-xl font-semibold">Follow Us</h3>
             <div className="flex mt-4 space-x-6">
               <a href="#" className="hover:text-primary">
-                <XIcon/>
+                <XIcon className='w-6 h-6 text-white hover:text-green-500 hover:scale-110'/>
               </a>
               <a href="#" className="hover:text-primary">
-                <YoutubeIcon/>
+                <YoutubeIcon className='w-6 h-6 text-white hover:text-fuchsia-500 hover:scale-110'/>
               </a>
               <a href="#" className="hover:text-primary">
-                <InstagramLogoIcon/>
+                <InstagramLogoIcon className='w-6 h-6 text-white hover:text-pink-500 hover:scale-110'/>
               </a>
             </div>
           </div>

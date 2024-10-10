@@ -1,7 +1,7 @@
 "use client";
 import { ParallaxScrollSecond } from "../ui/parallax-scroll-2";
 
-export function ParallaxScrollSecondDemo() {
+export function ParallaxScrollSecondComponent() {
   return <ParallaxScrollSecond images={images} />;
 }
 
