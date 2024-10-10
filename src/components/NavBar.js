@@ -15,7 +15,12 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
-import { MenuIcon, User2Icon, BellIcon, SettingsIcon } from "lucide-react"; // Import random icons
+import {
+  MenuIcon,
+  User2Icon,
+  BellIcon,
+  SettingsIcon,
+} from "lucide-react"; // Import random icons
 import { Button } from "./ui/button";
 import Input from "./Input";
 
@@ -32,14 +37,14 @@ export function NavBar() {
   ];
 
   return (
-    <div className="flex items-center justify-between p-4 shadow-md sticky top-0 z-50 backdrop-filter backdrop-blur-lg bg-opacity-75 bg-white dark:bg-gray-900">
+    <div className="flex items-center justify-between p-4 shadow-md sticky top-0 z-50 backdrop-filter backdrop-blur-lg bg-opacity-75">
       {/* Logo */}
       <Link href="/" className="flex items-center space-x-2">
         <img src={logo} alt="Rookus Logo" className="h-8 w-8" />
         <span className="text-xl font-bold">Rookus</span>
       </Link>
 
-      {/* Desktop Menu */}
+      {/* Main Navigation (Hidden on mobile) */}
       <div className="hidden md:flex space-x-4">
         <NavigationMenu>
           <NavigationMenuList>
@@ -91,23 +96,21 @@ export function NavBar() {
         </NavigationMenu>
       </div>
 
-      {/* Right-side icons and search */}
-      <div className="flex items-center space-x-4">
-        {/* Search bar visible only on desktop */}
-        <Input className="hidden md:block" placeholder="Search..." /> {/* Search input */}
-
+      {/* Right-side icons and search (Hidden on mobile) */}
+      <div className="hidden md:flex items-center space-x-4">
+        <Input className="hidden md:block" /> {/* Search is visible on desktop */}
         <Button variant="outline" size="icon" className="p-2 text-gray-500 hover:text-gray-700">
-          <User2Icon className="h-6 w-6" /> {/* User Icon */}
+          <User2Icon className="h-6 w-6" />
         </Button>
         <Button variant="outline" size="icon" className="p-2 text-gray-500 hover:text-gray-700">
-          <BellIcon className="h-6 w-6" /> {/* Bell Icon */}
+          <BellIcon className="h-6 w-6" />
         </Button>
         <Button variant="outline" size="icon" className="p-2 text-gray-500 hover:text-gray-700">
-          <SettingsIcon className="h-6 w-6" /> {/* Settings Icon */}
+          <SettingsIcon className="h-6 w-6" />
         </Button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu with Sheet */}
       <div className="md:hidden">
         <Sheet>
           <SheetTrigger asChild>
@@ -120,13 +123,17 @@ export function NavBar() {
               <MenuIcon className="h-6 w-6" />
             </Button>
           </SheetTrigger>
-          <SheetContent>
-            {/* Search bar in mobile menu */}
-            <Input className="mb-4" placeholder="Search..." /> {/* Mobile search input */}
+          <SheetContent className="flex flex-col p-4">
+            <Input placeholder="Search..." className="mb-4" /> {/* Moved Search here */}
             <ul className="space-y-4">
               <li>
+                <Link href="/ai-tools" className="block text-lg font-medium">
+                  AI Design Tools
+                </Link>
+              </li>
+              <li>
                 <Link href="/docs" className="block text-lg font-medium">
-                  Documentation
+                  AI Tools
                 </Link>
               </li>
               <li>
