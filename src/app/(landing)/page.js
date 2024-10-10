@@ -1,4 +1,5 @@
 import { JoinWaitList } from '@/components/(Landing)/JoinWaitList'
+import { ParallaxScrollSecondDemo } from '@/components/(Landing)/Parallex'
 import { NavBar } from '@/components/NavBar'
 import React from 'react'
 
@@ -9,7 +10,9 @@ export default function page() {
       <div className="flex items-center justify-center h-screen ">
         <h1 className="text-4xl font-bold">Welcome to Rookus</h1>
       </div>
+      <ParallaxScrollSecondDemo/>
       <JoinWaitList />
+
     </div>
   )
 }
