@@ -108,7 +108,7 @@ export function NavBar() {
         <Button variant="outline" size="icon" className="p-2 text-gray-500 hover:text-gray-700">
           <SettingsIcon className="h-6 w-6" />
         </Button>
-      </div>
+      </div> {/* No need for these buttons of this div */}
 
       {/* Mobile Menu with Sheet */}
       <div className="md:hidden">

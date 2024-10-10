@@ -3,6 +3,7 @@ import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { HoverBorderGradientButton } from "../(Landing)/HoverBorderGradientButton";
 
 export const HeroParallax = ({
   products
@@ -68,6 +69,9 @@ export const Header = () => {
         Discover AI-powered clothing that redefines style and personalization.
         Join us in revolutionizing the fashion industry with cutting-edge technology.
       </p>
+      <div className="flex  mt-5">
+        <HoverBorderGradientButton/>
+      </div>
     </div>)
   );
 };
