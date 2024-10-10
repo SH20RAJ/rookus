@@ -2,6 +2,8 @@
 
 Rookus is a platform that revolutionizes the fashion industry by connecting designers, vendors, and customers globally. Our AI-powered system offers personalized custom clothing experiences, reducing delivery time and cutting costs, while ensuring a seamless workflow.
 
+> See Preview at [rookus.onrender.com](https://rookus.onrender.com/)
+
 ## Features
 
 - **AI Design Automation**: Create custom designs using our in-house generative AI models.
