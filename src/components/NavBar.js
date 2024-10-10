@@ -20,6 +20,7 @@ import {
   User2Icon,
   BellIcon,
   SettingsIcon,
+  ShoppingBagIcon,
 } from "lucide-react"; // Import random icons
 import { Button } from "./ui/button";
 import Input from "./Input";
@@ -102,11 +103,9 @@ export function NavBar() {
           <User2Icon className="h-6 w-6" />
         </Button>
         <Button variant="outline" size="icon" className="p-2 text-gray-500 hover:text-gray-700">
-          <BellIcon className="h-6 w-6" />
+          <ShoppingBagIcon className="h-6 w-6" />
         </Button>
-        <Button variant="outline" size="icon" className="p-2 text-gray-500 hover:text-gray-700">
-          <SettingsIcon className="h-6 w-6" />
-        </Button>
+        
       </div> {/* No need for these buttons of this div */}
 
       {/* Mobile Menu with Sheet */}
