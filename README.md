@@ -3,6 +3,9 @@
 Rookus is a platform that revolutionizes the fashion industry by connecting designers, vendors, and customers globally. Our AI-powered system offers personalized custom clothing experiences, reducing delivery time and cutting costs, while ensuring a seamless workflow.
 
 > See Preview at [rookus.onrender.com](https://rookus.onrender.com/)
+> About :- https://github.com/user-attachments/files/17322019/ROOKUS_20240720_201243_0000_compressed.pdf
+> Previous Website :- https://rookus.in/
+> Assets :- https://github.com/SH20RAJ/rookus/issues/6
 
 ## Features
 
