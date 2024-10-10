@@ -15,10 +15,23 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { MenuIcon } from "lucide-react"
+import { Button } from "./ui/button"
 
 export function NavBar() {
+
+
+    let menuItems = [
+        {
+            name: "AI Design Tools",
+            href: "/ai-tools",
+        },
+        {
+            name: "AI Tools",
+            href: "/ai-tools",
+        },
+    ]
   return (
-    <div className="flex items-center justify-between p-4 shadow-md">
+    <div className="flex items-center justify-between p-4 shadow-md sticky top-0 z-50   backdrop-filter backdrop-blur-lg bg-opacity-75">
       <Link href="/" className="flex items-center space-x-2">
         <RocketIcon className="h-8 w-8 text-blue-500" />
         <span className="text-xl font-bold">Rookus</span>
@@ -43,28 +56,28 @@ export function NavBar() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/ai-tools" legacyBehavior passHref>
+              <Link href="/docs" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   AI Tools
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/vendor-integration" legacyBehavior passHref>
+              <Link href="/contact" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Vendor Integration
+                  Contact Us
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/virtual-fitting" legacyBehavior passHref>
+              <Link href="/about" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Virtual Fitting Room
+                  About Us
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/fashion-trends" legacyBehavior passHref>
+              <Link href="/blog" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Fashion Trends
                 </NavigationMenuLink>
@@ -76,31 +89,31 @@ export function NavBar() {
       <div className="md:hidden">
         <Sheet>
           <SheetTrigger asChild>
-            <button className="p-2 text-gray-500 hover:text-gray-700">
+            <Button variant="outline" size="icon" className="p-2 text-gray-500 hover:text-gray-700">
               <span className="sr-only">Open menu</span>
               <MenuIcon className="h-6 w-6" />
-            </button>
+            </Button>
           </SheetTrigger>
           <SheetContent>
             <ul className="space-y-4">
               <li>
-                <Link href="/ai-tools" className="block text-lg font-medium">
-                  AI Tools
+                <Link href="/docs" className="block text-lg font-medium">
+                  Documentation
                 </Link>
               </li>
               <li>
-                <Link href="/vendor-integration" className="block text-lg font-medium">
-                  Vendor Integration
+                <Link href="/contact" className="block text-lg font-medium">
+                  Contact Us
                 </Link>
               </li>
               <li>
-                <Link href="/virtual-fitting" className="block text-lg font-medium">
-                  Virtual Fitting Room
+                <Link href="/about" className="block text-lg font-medium">
+                  About Us
                 </Link>
               </li>
               <li>
-                <Link href="/fashion-trends" className="block text-lg font-medium">
-                  Fashion Trends
+                <Link href="/blog" className="block text-lg font-medium">
+                  Blog
                 </Link>
               </li>
             </ul>
