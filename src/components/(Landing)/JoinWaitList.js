@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import { BackgroundBeams } from "../ui/background-beams";
-import { Input } from "../ui/input";
+// import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import Waitlist from "../waitlist/Waitlist";
+import Waitlist from "../Waitlist/Waitlist";
 
 export function JoinWaitList() {
   // State to manage the visibility of the modal

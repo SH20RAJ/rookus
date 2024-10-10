@@ -1,3 +1,4 @@
+import Footer from '@/components/(Landing)/Footer'
 import { HeroParallaxDemo } from '@/components/(Landing)/HeroSection'
 import { JoinWaitList } from '@/components/(Landing)/JoinWaitList'
 import { ParallaxScrollSecondDemo } from '@/components/(Landing)/Parallex'
@@ -19,6 +20,7 @@ export default function page() {
         <ParallaxScrollSecondDemo/>
       </div>
       <JoinWaitList />
+      <Footer/>
 
 
     </div>
