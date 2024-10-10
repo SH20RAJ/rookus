@@ -1,9 +1,10 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
-import { cn } from "@/lib/utils"
-import { RocketIcon } from "@radix-ui/react-icons"
+import * as React from "react";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import logo from "../../public/assets/images/logo.png";
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,30 +13,32 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
-import { MenuIcon } from "lucide-react"
-import { Button } from "./ui/button"
+} from "@/components/ui/navigation-menu";
+import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import { MenuIcon, User2Icon, HeartIcon, BellIcon, SettingsIcon } from "lucide-react"; // Import random icons
+import { Button } from "./ui/button";
+import Input from "./Input";
+
 
 export function NavBar() {
+  let menuItems = [
+    {
+      name: "AI Design Tools",
+      href: "/ai-tools",
+    },
+    {
+      name: "AI Tools",
+      href: "/ai-tools",
+    },
+  ];
 
-
-    let menuItems = [
-        {
-            name: "AI Design Tools",
-            href: "/ai-tools",
-        },
-        {
-            name: "AI Tools",
-            href: "/ai-tools",
-        },
-    ]
   return (
-    <div className="flex items-center justify-between p-4 shadow-md sticky top-0 z-50   backdrop-filter backdrop-blur-lg bg-opacity-75">
-      <Link href="/" className="flex items-center space-x-2">
-        <RocketIcon className="h-8 w-8 text-blue-500" />
-        <span className="text-xl font-bold">Rookus</span>
-      </Link>
+    <div className="flex items-center justify-between p-4 shadow-md sticky top-0 z-50 backdrop-filter backdrop-blur-lg bg-opacity-75">
+          <Link href="/" className="flex items-center space-x-2">
+         <img src={logo} alt="Rookus Logo" className="h-8 w-8" />
+          <span className="text-xl font-bold">Rookus</span>
+          </Link>
+
       <div className="hidden md:flex space-x-4">
         <NavigationMenu>
           <NavigationMenuList>
@@ -86,10 +89,28 @@ export function NavBar() {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
+      {/* Right-side icons */}
+      <div className="flex items-center space-x-4">
+        {/* Add random icons here */}
+        <Input />
+        <Button variant="outline" size="icon" className="p-2 text-gray-500 hover:text-gray-700">
+        <User2Icon className="h-6 w-6" /> {/* Changed HeartIcon to UserIcon */}
+        </Button>
+        <Button variant="outline" size="icon" className="p-2 text-gray-500 hover:text-gray-700">
+          <BellIcon className="h-6 w-6" />
+        </Button>
+        <Button variant="outline" size="icon" className="p-2 text-gray-500 hover:text-gray-700">
+          <SettingsIcon className="h-6 w-6" />
+        </Button>
+      </div>
       <div className="md:hidden">
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="p-2 text-gray-500 hover:text-gray-700">
+            <Button
+              variant="outline"
+              size="icon"
+              className="p-2 text-gray-500 hover:text-gray-700"
+            >
               <span className="sr-only">Open menu</span>
               <MenuIcon className="h-6 w-6" />
             </Button>
@@ -121,30 +142,28 @@ export function NavBar() {
         </Sheet>
       </div>
     </div>
-  )
+  );
 }
 
-const ListItem = React.forwardRef(
-  ({ className, title, children, ...props }, ref) => {
-    return (
-      <li>
-        <NavigationMenuLink asChild>
-          <a
-            ref={ref}
-            className={cn(
-              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-              className
-            )}
-            {...props}
-          >
-            <div className="text-sm font-medium leading-none">{title}</div>
-            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-              {children}
-            </p>
-          </a>
-        </NavigationMenuLink>
-      </li>
-    )
-  }
-)
-ListItem.displayName = "ListItem"
+const ListItem = React.forwardRef(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+});
+ListItem.displayName = "ListItem";
