@@ -40,8 +40,7 @@ export function NavBar() {
     <div className="flex items-center justify-between p-4 shadow-md sticky top-0 z-50 backdrop-filter backdrop-blur-lg bg-opacity-75">
       {/* Logo */}
       <Link href="/" className="flex items-center space-x-2">
-        <img src={"/logo.png"} alt="Rookus Logo" className="h-8 w-8 mr-4 mb-2" />
-        <span className="text-xl font-bold">Rookus</span>
+        <img src={"/logo.png"} alt="Rookus Logo" className="h-20 w-20 mr-4 mb-2" />
       </Link>
 
       {/* Main Navigation (Hidden on mobile) */}
