@@ -1,9 +1,10 @@
+import { NavBar } from '@/components/NavBar'
 import React from 'react'
 
 export default function page() {
   return (
     <div>
-      Landing Page
+      <NavBar />
     </div>
   )
 }
