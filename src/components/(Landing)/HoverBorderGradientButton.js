@@ -10,7 +10,7 @@ export function HoverBorderGradientButton() {
         as="button"
         className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2">
         <AceternityLogo />
-        <span>Get Started</span>
+        <span>Shop Now!</span>
       </HoverBorderGradient>
     </div>)
   );
