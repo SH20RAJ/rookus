@@ -31,7 +31,6 @@ export default function page() {
         <FAQs />
       </section>
       <Separator className="w-full" />
-      <JoinWaitList />
     </div>
   );
 }

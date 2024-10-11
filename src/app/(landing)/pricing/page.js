@@ -1,13 +1,16 @@
 import React from 'react';
-import { Card, CardHeader, CardContent, CardFooter } from '@/components/ui/card'; 
+import { Card, CardHeader, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils'; 
+import { cn } from '@/lib/utils';
+import { JoinWaitList } from '@/components/(Landing)/JoinWaitList';
+
 
 export default function Pricing() {
     // Temporay Pricing Section maybe changed later
   return (
     <section className="bg-background py-12 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-30 blur-lg"></div>
+      {/* Blackish gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-black to-gray-800 opacity-90"></div>
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-3xl font-bold text-center text-foreground mb-8">
           Our Pricing Plans
@@ -16,7 +19,7 @@ export default function Pricing() {
           Choose the plan that best suits your needs and get started with us today!
         </p>
         <div className="flex flex-col md:flex-row justify-center items-center md:space-x-6">
-          {['Basic', 'Standard', 'Premium'].map((plan, index) => (
+          {['Free', 'Standard', 'Premium'].map((plan, index) => (
             <Card
               key={plan}
               className={cn(
@@ -32,31 +35,31 @@ export default function Pricing() {
               </CardHeader>
               <CardContent>
                 <p className="mt-4 text-muted-foreground">
-                  {plan === 'Basic' ? '₹1,500/month' : plan === 'Standard' ? '₹3,800/month' : '₹7,500/month'}
+                  {plan === 'Free' ? '₹0/month' : plan === 'Standard' ? '₹1,500/month' : '₹5,000/month'}
                 </p>
                 <ul className="mt-6 space-y-4">
-                  {plan === 'Basic' && (
+                  {plan === 'Free' && (
                     <>
-                      <li className="text-muted-foreground">Access to basic features</li>
-                      <li className="text-muted-foreground">Email support</li>
-                      <li className="text-muted-foreground">Community access</li>
+                      <li className="text-muted-foreground">Access to all Basic Models for limited use</li>
+                      <li className="text-muted-foreground">10 Tokens per week</li>
+                      <li className="text-muted-foreground">Limited access to Virtual Try On</li>
                     </>
                   )}
                   {plan === 'Standard' && (
                     <>
-                      <li className="text-muted-foreground">All features in Basic</li>
-                      <li className="text-muted-foreground">Priority support</li>
-                      <li className="text-muted-foreground">Advanced analytics</li>
-                      <li className="text-muted-foreground">Monthly webinars</li>
+                      <li className="text-muted-foreground">Access to all Rookus Models</li>
+                      <li className="text-muted-foreground">200 tokens per week</li>
+                      <li className="text-muted-foreground">Full access to Virtual Try On</li>
+                      <li className="text-muted-foreground">Limited access to Beta Features</li>
                     </>
                   )}
                   {plan === 'Premium' && (
                     <>
-                      <li className="text-muted-foreground">All features in Standard</li>
-                      <li className="text-muted-foreground">Dedicated account manager</li>
-                      <li className="text-muted-foreground">Custom integrations</li>
-                      <li className="text-muted-foreground">24/7 support</li>
-                      <li className="text-muted-foreground">Exclusive content</li>
+                      <li className="text-muted-foreground">Access to all Rookus Models and APIs</li>
+                      <li className="text-muted-foreground">1000 Tokens per week</li>
+                      <li className="text-muted-foreground">Platform Integratable APIs</li>
+                      <li className="text-muted-foreground">Access to all Beta Models</li>
+                      <li className="text-muted-foreground">Access to Rookus Design Catalogues</li>
                     </>
                   )}
                 </ul>
@@ -69,6 +72,7 @@ export default function Pricing() {
             </Card>
           ))}
         </div>
+          <JoinWaitList />
       </div>
     </section>
   );
