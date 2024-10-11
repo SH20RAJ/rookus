@@ -3,6 +3,8 @@ import { HeroParallaxComponent } from "@/components/(Landing)/HeroSection";
 import { JoinWaitList } from "@/components/(Landing)/JoinWaitList";
 import { ParallaxScrollSecondComponent } from "@/components/(Landing)/Parallex";
 import { Separator } from "@/components/ui/separator";
+import Newsletter from "../../components/Newsletter";
+
 export default function page() {
   return (
     <div>
@@ -31,6 +33,7 @@ export default function page() {
         <FAQs />
       </section>
       <Separator className="w-full" />
+      <Newsletter />
     </div>
   );
 }
