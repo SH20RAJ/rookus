@@ -4,6 +4,8 @@ import { JoinWaitList } from "@/components/(Landing)/JoinWaitList";
 import { ParallaxScrollSecondComponent } from "@/components/(Landing)/Parallex";
 import { Separator } from "@/components/ui/separator";
 import Newsletter from "../../components/Newsletter";
+import Image from "next/image";
+import MyImage from "../../../public/assets/images/D (1).png"; 
 
 export default function page() {
   return (
@@ -34,6 +36,17 @@ export default function page() {
       </section>
       <Separator className="w-full" />
       <Newsletter />
+
+      {/* Increased width of the image */}
+      <div className="flex justify-center my-10">
+        <Image 
+          src={MyImage} 
+          alt="AI-Generated Fashion" 
+          width={1200}  // Increased width
+          height={800}  // Adjust height proportionally
+          className="object-cover" 
+        />
+      </div>
     </div>
   );
 }
